@@ -1,10 +1,8 @@
-Name:           Xiaomei Wen
-Student ID:     7022928251
 
-1. What have your done?
+## What have your done?
   This is a socket programming project. In this project, it contains 4 files. The client.cpp run as the client side. Other files sever as the Google Compute Engine for processing. Client send job.txt to edge server, and edge server separate the work to server_and and server_or. These two backend server will do computations and send the results back to edge server. And user will get the results.
 
-2. What your code files and what each one of them does?
+## What your code files and what each one of them does?
   In my project, the buffer size of each line is 30.
   Max size of the total file is 4000.
   Max number of lines is 100.
@@ -17,14 +15,14 @@ Student ID:     7022928251
   d. server_or
     Recieve messages from edge server. Extract 2 numbers from the input string. Do OR computation. Send the result to edge server. Use UDP socket.
 
-3. What the TA should do to run your programs.
+## What the TA should do to run your programs.
   Compile all cpp files using "make all" first.
   Open one terminal, run "make edge"
   Open another terminal, run "make server_and"
   Open the third terminal, run "make server_or"
   Open a terminal for client, run "./client <filename>"
 
-4. The format of all the messages exchanged.
+## The format of all the messages exchanged.
   Reading from txt using char Array.
   Client sending to Edge Server using char[30] for each line.
   Edge Server using char[30] for receiving each line.
@@ -34,11 +32,9 @@ Student ID:     7022928251
   Back server send messages back using char arrays.
   Edge server send results back using char arrays.
 
-5. Idiosyncrasy programs?
+## Idiosyncrasy programs?
   In my project, the buffer size of each line is 30.
   Max size of the total file is 4000.
   Max number of lines is 100.
   If input message of And or Or equals to zero, may cause error in back server.
 
-6. Reused Code.
-  No reuse.
