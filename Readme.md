@@ -1,7 +1,7 @@
 
 ## What have I done?
   This is a socket programming project. In this project, it contains 4 files. The client.cpp run as the client side. Other files sever as the Google Compute Engine for processing. Client send job.txt to edge server, and edge server separate the work to server_and and server_or. These two backend server will do computations and send the results back to edge server. And user will get the results.
-  ![avatar](github.com/xiaomeiwen/SocketProgramming/blob/master/pic.png)
+  ![avatar](http://github.com/xiaomeiwen/SocketProgramming/blob/master/pic.png)
 
 ## What your code files and what each one of them does?
   In my project, the buffer size of each line is 30.
