@@ -1,21 +1,21 @@
 
-## What have your done?
+## What have I done?
   This is a socket programming project. In this project, it contains 4 files. The client.cpp run as the client side. Other files sever as the Google Compute Engine for processing. Client send job.txt to edge server, and edge server separate the work to server_and and server_or. These two backend server will do computations and send the results back to edge server. And user will get the results.
 
 ## What your code files and what each one of them does?
   In my project, the buffer size of each line is 30.
   Max size of the total file is 4000.
   Max number of lines is 100.
-  a. client.cpp
+  ### client.cpp
     Read filename from argv, then read each line of the file. Each line will buffer in a sizeof 30 char array, then send to edge server. It use TCP to connect with edge server. It will receive result from edge server and print the results as the same sequence as the input.
-  b. edge.cpp
+  ### edge.cpp
     Can work continously, receiving messages from client. Edge server can separate messages, send messages begin with 'a' to server_and,  send messages begin with 'o' to server_or. It also use flag array to remember the sequence of input. Using UDP to connect with back servers. Receiving results from back server and send them back to client.
-  c. server_and
+  ### server_and
     Recieve messages from edge server. Extract 2 numbers from the input string. Do AND computation. Send the result to edge server. Use UDP socket.
-  d. server_or
+  ### server_or
     Recieve messages from edge server. Extract 2 numbers from the input string. Do OR computation. Send the result to edge server. Use UDP socket.
 
-## What the TA should do to run your programs.
+## What should you do to run this programs.
   Compile all cpp files using "make all" first.
   Open one terminal, run "make edge"
   Open another terminal, run "make server_and"
